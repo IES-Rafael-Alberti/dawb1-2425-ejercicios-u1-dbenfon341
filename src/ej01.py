@@ -5,12 +5,15 @@
 # Hola, Juan.
 
 def saludo(nombre: str) -> str:
-    saludo_completo = f"Hola, {nombre}."
+    saludo_completo: str = f"Hola, {nombre}."
     return saludo_completo
 
+
 def main():
-    nombre = str(input("Introduce tu nombre: "))
-    print (saludo(nombre))
+    nombre: str = input("Introduce tu nombre: ")
+    while (nombre == ""):
+        nombre: str = str(input("**ERROR** Debes introducir un nombre: "))
+    print(saludo(nombre))
 
 
 if __name__ == "__main__":

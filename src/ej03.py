@@ -11,8 +11,15 @@
 # 4. 1 + 2 * 5
 # Cuando termines comprueba con el intérprete si has acertado.
 
+ancho: int = 17
+alto: float = 12.0
+
+
 def main():
-    test = test
+    print(ancho / 2)
+    print(ancho // 2)
+    print(alto / 3)
+    print(1+2*5)
 
 if __name__ == "__main__":
     main()
