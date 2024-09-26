@@ -1,8 +1,9 @@
-# Ejercicio 1.2.1¶
-# Escribe un programa que pida el nombre del usuario para luego darle la bienvenida.
+# Ejercicio 1.2.2¶
+# Escribe un programa para pedirle al usuario las horas de trabajo y el precio por hora y calcule el importe total del servicio.
 #
-# Escribe tu nombre: Juan
-# Hola, Juan.
+# Horas de trabajo: 6
+# Coste por hora: 10
+# Importe total: 60
 #
 # ++ recibe horas y coste y retorna el importe total.
 
