@@ -6,7 +6,6 @@ def celsius_a_fahrenheit(temperatura: float) -> str:
     string_conversion = f"La temperatura introducida ( {temperatura} Cº) pasada a Fahrenheit es: {fahrenheit}Fº"
     return string_conversion
 
-
 def main():
     temperatura: float = float(input("Introduce la temperatura en grados Celsius que deseas convertir a Fahrenheit: "))
     while (temperatura <= 0):

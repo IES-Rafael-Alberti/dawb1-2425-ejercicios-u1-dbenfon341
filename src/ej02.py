@@ -9,7 +9,6 @@ def calcular_horas(horas: int, precio_hora: int) -> str:
     string_importe = f"Importe total: {horas*precio_hora}"
     return string_importe
 
-
 def main():
     horas: int = int(input("Horas de trabajo: "))
     while (horas <= 0):

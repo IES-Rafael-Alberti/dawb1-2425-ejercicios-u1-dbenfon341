@@ -10,7 +10,6 @@ def saludo(nombre: str) -> str:
     saludo_completo: str = f"Hola, {nombre}."
     return saludo_completo
 
-
 def main():
     nombre: str = input("Introduce tu nombre: ")
     while (nombre == ""):

@@ -4,7 +4,11 @@
 # suma = n(n+1)/2
 
 def main():
-    test = test
+    n: int = int(input("Introduce un número: "))
+    numero_completo: int = 0
+    for i in range(0, n+1):
+        numero_completo += i
+    print(numero_completo)
 
 if __name__ == "__main__":
     main()

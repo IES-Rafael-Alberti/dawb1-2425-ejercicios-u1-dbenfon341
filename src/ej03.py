@@ -14,7 +14,6 @@
 ancho: int = 17
 alto: float = 12.0
 
-
 def main():
     print(ancho / 2)
     print(ancho // 2)
