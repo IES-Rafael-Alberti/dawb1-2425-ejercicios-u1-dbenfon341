@@ -22,7 +22,7 @@ def numero_menor(num1:int, num2:int) -> int:
     return num_menor
 
 def contador_numeros(num1: int, num2: int) -> int:
-    """Funcion para contar cuantos números hay entre los dos introducidos. Reice dos numeros y retorna la cantidad entre ellos después de ordenarlos.
+    """Funcion para contar cuantos números hay entre los dos introducidos. Ordena dos numeros y retorna la cantidad entre ellos.
     Args:
         num1(int): Primer número introducido.
         num2(int): Segundo número introducido.
@@ -40,15 +40,18 @@ def contador_numeros(num1: int, num2: int) -> int:
     return (num_mayor - numero_menor(num1, num2))
 
 def main():
+    validar_numeros = True
     try:
-        num1 = int(input("Introduce un número: "))
-        num2 = int(input("Introduce un segundo número: "))   
-        if num1 == num2:
-            print("**ERROR** Los números no pueden ser iguales.")
-        elif num1 <= 0 or num2 <= 0:
-            print("Los números no pueden ser menores que 0")
-        else:
-            print(f"El número menor es el {numero_menor(num1, num2)} y entre ellos existen {contador_numeros(num1, num2)} números enteros.")
+        while validar_numeros:
+            num1 = int(input("Introduce un número: "))
+            num2 = int(input("Introduce un segundo número: "))
+            if num1 == num2:
+                print("**ERROR** Los números no pueden ser iguales.")
+            elif num1 <= 0 or num2 <= 0:
+                print("Los números no pueden ser menores que 0")
+            else:
+                validar_numeros = False
+                print(f"El número menor es el {numero_menor(num1, num2)} y entre ellos existen {contador_numeros(num1, num2)} números enteros.")
 
     except ValueError as e:
         print(f"**ERROR** Solo funciono con números. Mensaje de error -> {e}" )
