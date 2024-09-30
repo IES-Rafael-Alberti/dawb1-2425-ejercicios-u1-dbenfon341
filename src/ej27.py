@@ -16,7 +16,7 @@ def main():
 
     nombre, precio, unidades, precio_total = informacion_producto(nombre, precio, unidades)
 
-    print(f"Nombre del producto: {nombre}\nPrecio: {precio}\nUnidades: {unidades}\nPrecio total: {precio_total}")
+    print(f"Nombre del producto: {nombre}\nPrecio: {precio:09.2f}\nUnidades: {unidades:03d}\nPrecio total: {precio_total:011.2f}")
 
 if __name__ == "__main__":
     main()
