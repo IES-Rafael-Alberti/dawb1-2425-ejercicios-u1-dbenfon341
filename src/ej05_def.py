@@ -4,7 +4,15 @@
 # ++ recibe el importe del artículo sin iva y el tipo de iva a aplicar, pero no retorna nada, sino que se imprime desde dentro de la función.
 
 def calcular_iva(importe: float, iva: float) -> float:
-    """Recibe importe y iva y calcula el precio final"""
+    """
+    Recibe importe y iva y calcula el precio final
+
+    Args:
+        importe: recibe importe del usuario de tipo float.
+        iva: variable para almacenar el tipo de iva introducido por el usuario.
+    Returns:
+        Retorna el precio final del artículo.
+        """
     return ((importe * iva) / 100) + importe
 
 def main():
