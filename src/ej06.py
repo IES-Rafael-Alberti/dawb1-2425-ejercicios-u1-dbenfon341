@@ -3,9 +3,10 @@
 
 def calcular_importe(precio_articulo: int, iva) -> tuple:
 
-    importe_iva: float
-    importe_no_iva: float
-    return
+    importe_con_iva: float
+    importe_sin_iva: float
+
+    return importe_con_iva, importe_sin_iva
 
 
 def main():
