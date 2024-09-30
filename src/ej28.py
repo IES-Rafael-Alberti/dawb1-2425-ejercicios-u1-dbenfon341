@@ -22,7 +22,16 @@ def numero_menor(num1:int, num2:int) -> int:
     return num_menor
 
 def contador_numeros(num1: int, num2: int) -> int:
+    """Funcion para contar cuantos números hay entre los dos introducidos. Reice dos numeros y retorna la cantidad entre ellos después de ordenarlos.
+    Args:
+        num1(int): Primer número introducido.
+        num2(int): Segundo número introducido.
+    Returns:
+        Devuelve la cantidad de números entre los dos.
+    """
+
     num_mayor: int = 0
+    
     if num1 > num2:
         num_mayor = num1
     else:

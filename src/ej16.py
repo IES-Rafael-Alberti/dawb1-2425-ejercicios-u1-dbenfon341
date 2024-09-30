@@ -3,6 +3,10 @@
 # que no son del día. Después el programa debe mostrar el precio habitual de una barra de pan (establecido en el programa como una constante), el descuento que se le hace por no ser 
 # fresca y el coste final total de todas las barras no frescas.
 
+BARRA_PAN: float = 3.49
+
+barra_descuento = BARRA_PAN * (60 / 100)
+
 def main():
     test = test
 
