@@ -15,10 +15,15 @@ ancho: int = 17
 alto: float = 12.0
 
 def main():
-    print(ancho / 2)
-    print(ancho // 2)
-    print(alto / 3)
-    print(1+2*5)
+    calculo_1 = ancho / 2
+    calculo_2 = ancho // 2
+    calculo_3 = alto / 3
+    calculo_4 = 1+2*5
+
+    print(fcalculo_1)
+    print(f"{calculo_2}")
+    print(f"{calculo_3}")
+    print(f"{calculo_4}")
 
 if __name__ == "__main__":
     main()
