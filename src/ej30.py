@@ -5,15 +5,15 @@
 # que introduzcan un valor correcto para ambos (os lo dejo a vuestra elección, la primera opción es más fácil, aunque el mundo está lleno de valientes).
 # Por ejemplo, si introducen los valores 1, 1 y 10, el programa mostrará en consola exactamente lo siguiente: SERIE => 1-2..3..4..5..6..7..8..9-10
 
-def serie(inicio: float, incremento: int, total: int) -> str:
-    serie = 0
-    serie_string: str = ""
-    for i in range (inicio, total, incremento):
-        serie += i
-        serie_string = serie + "-"
-    serie =+ "-" + total
+def serie(inicio: int, incremento: int, total: int) -> str:
+    
+    serie_string: str = f"SERIE => {inicio}-"
 
-    return serie
+    for i in range (inicio+incremento, total, incremento):
+        serie_string += f"..{i}"
+    serie_string += f"-{total}"
+
+    return serie_string
 
 def main():
     validar_incremento = True
@@ -21,11 +21,10 @@ def main():
     try:
         while validar_incremento:
             incremento: int = int(input("Dame un incremento: "))
-            if incremento < 0:
-                print("El número debe ser mayor que 0.")
+            if incremento > 0:
+                validar_incremento = False
             else:
-                validar_incremento: False
-
+                print("El número debe ser mayor que 0.")
         print(f"{serie(inicio, incremento, total)}")
 
     except ValueError as e:

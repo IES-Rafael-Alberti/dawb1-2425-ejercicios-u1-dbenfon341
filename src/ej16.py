@@ -5,7 +5,9 @@
 
 BARRA_PAN: float = 3.49
 
-barra_descuento = BARRA_PAN * (60 / 100)
+barra_descuento = BARRA_PAN * 0.60
+
+barra_dura = BARRA_PAN - barra_descuento
 
 def main():
     test = test

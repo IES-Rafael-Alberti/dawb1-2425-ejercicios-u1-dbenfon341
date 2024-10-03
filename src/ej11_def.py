@@ -5,8 +5,18 @@
 #
 # ++ recibe un número y retorna una cadena de caracteres con el resultado de la función.
 
+def contar_numeros(contar_num: int) -> int:
+    numero_completo: int = 0
+    for i in range(0, contar_num+1):
+        numero_completo += i
+    return numero_completo
+
 def main():
-    test = test
+    try:
+        contar_num: int = int(input("Introduce un número: "))
+        print(f"La suma de los números enteros es: {contar_numeros(contar_num)}")
+    except ValueError as e:
+        print(f"**ERROR** Solo puedo tratar con números. Código de error -> {e}")
 
 if __name__ == "__main__":
     main()
