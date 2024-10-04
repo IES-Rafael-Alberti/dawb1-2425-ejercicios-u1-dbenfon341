@@ -1,17 +1,13 @@
 def comprobar_entero(entero: str)-> bool:
-    validar_entero = True
-    while validar_entero:
-        if entero.isdigit():
-            validar_entero = False
-            return True
-        else:
-            entero = input("Debes introducir un número entero: ")
+    if entero.isdigit():
+        return True
+    else:
+        return False
 
 def dame_entero():
     numero = input("Introduce un número entero: ")
-    valido = comprobar_entero(numero)
-    while not valido:
-        valido = comprobar_entero(numero)
+    while not comprobar_entero(numero):
+        numero = input("Debe ser un número entero: ")
     else:
         return numero
 
