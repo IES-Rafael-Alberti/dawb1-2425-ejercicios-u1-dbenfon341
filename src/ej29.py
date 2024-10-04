@@ -9,7 +9,6 @@ def main():
     validar_edad = True
     nombre: str = str(input("Introduce tu nombre: "))
 
-
     try:
         if nombre == "":
             nombre = "Desconocido"
