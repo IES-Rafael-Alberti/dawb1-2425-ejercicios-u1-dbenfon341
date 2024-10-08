@@ -20,7 +20,7 @@ def main():
         if num2 == 0:
             raise ZeroDivisionError
     
-        print(f"La división de {num1} y {num2} me da un cociente {division_cociente(num1, num2)} y un resto {division_resto(num1, num2)}.")
+        print(f"La división de {num1} entre {num2} me da un cociente {division_cociente(num1, num2)} y un resto {division_resto(num1, num2)}.")
 
     except ValueError:
         print("**ERROR** Debes introducir números.")

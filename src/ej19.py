@@ -10,7 +10,7 @@ def contar_letras(palabra: str) -> str:
 
 def main():
     palabra_usuario = str(input("Introduce tu nombre: "))
-    print(contar_letras(palabra_usuario))
+    print(f"{palabra_usuario.upper()} tiene {contar_letras(palabra_usuario)} letras.")
 
 if __name__ == "__main__":
     main()

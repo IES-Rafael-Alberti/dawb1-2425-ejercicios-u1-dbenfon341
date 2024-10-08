@@ -7,9 +7,9 @@
 
 def serie(inicio: int, incremento: int, total: int) -> str:
     
-    serie_string: str = f"SERIE => {inicio}-"
+    serie_string: str = f"SERIE => {inicio}-{inicio+incremento}"
 
-    for i in range (inicio+incremento, total, incremento):
+    for i in range (inicio+(incremento*2), total, incremento):
         serie_string += f"..{i}"
     serie_string += f"-{total}"
 
@@ -18,13 +18,20 @@ def serie(inicio: int, incremento: int, total: int) -> str:
 def main():
     validar_incremento = True
     validar_total = True
+    inicio = int(input("Introduce un número inicial para la serie: "))
     try:
         while validar_incremento:
             incremento: int = int(input("Dame un incremento: "))
             if incremento > 0:
                 validar_incremento = False
             else:
-                print("El número debe ser mayor que 0.")
+                print("El número de incremento debe ser mayor que 0.")
+        while validar_total:
+            total: int = int(input("Introduce un total: "))
+            if incremento > 0:
+                validar_total = False
+            else:
+                print("El número total debe ser mayor que 0." )
         print(f"{serie(inicio, incremento, total)}")
 
     except ValueError as e:

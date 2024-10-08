@@ -11,6 +11,8 @@
 # 4. 1 + 2 * 5
 # Cuando termines comprueba con el intérprete si has acertado.
 
+# ```ancho / alto = 1.4166666666666667 y es de tipo <class 'float'>```
+
 ancho: int = 17
 alto: float = 12.0
 
@@ -20,10 +22,10 @@ def main():
     calculo_3 = alto / 3
     calculo_4 = 1+2*5
 
-    print(fcalculo_1)
-    print(f"{calculo_2}")
-    print(f"{calculo_3}")
-    print(f"{calculo_4}")
+    print(f"ancho / 2 = {calculo_1} y es de tipo {type(calculo_1)}")
+    print(f"ancho // 2 = {calculo_2} y es de tipo {type(calculo_2)}")
+    print(f"alto /3 = {calculo_3} y es de tipo {type(calculo_3)}")
+    print(f"1+2*5 = {calculo_4} y es de tipo {type(calculo_4)}")
 
 if __name__ == "__main__":
     main()
