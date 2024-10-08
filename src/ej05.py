@@ -16,7 +16,7 @@ def main():
             iva: float = float(input("**ERROR** El IVA no puede ser menor que 0: "))
 
         precio_total = calcular_iva(importe, iva)
-        print(f"El precio total es de {precio_total} €")
+        print(f"El precio total es de {precio_total:.2f} €")
 
     except ValueError:
         print("**ERROR** Debes introducir un número.")

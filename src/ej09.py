@@ -3,7 +3,7 @@
 
 def main():
     print("El resultado de la suma de los tres números es:",
-    int(input("Introduce un número par sumar: ")) + int(input("Introduce otro número: ")) + int(input("Introduce otro número: ")))
+    round(float(input("Introduce un número par sumar: ")) + float(input("Introduce otro número: ")) + float(input("Introduce otro número: ")),2))
 
 if __name__ == "__main__":
     main()

@@ -22,7 +22,7 @@ def main():
             print("ERROR El número debe ser positivo.")
             num3: float = float(input("Introduce el número nuevamente: "))
 
-        print(f"La suma de {num1}, {num2} y {num3} es de {suma_numeros(num1, num2, num3)}.")
+        print(f"La suma de {num1:.2f}, {num2:.2f} y {num3:.2f} es de {suma_numeros(num1, num2, num3):.2f}.")
 
     except ValueError:
         print("**ERROR** Solo puedo sumar números.")
