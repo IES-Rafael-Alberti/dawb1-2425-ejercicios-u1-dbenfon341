@@ -2,7 +2,15 @@
 # Escribe un programa que pida el importe sin IVA de un artículo y el tipo de IVA a aplicar y calcule e imprima por pantalla el precio final del artículo.
 
 def calcular_iva(importe: float, iva: float) -> float:
-    """Recibe importe y iva y calcula el precio final"""
+    """
+    Recibe importe y iva y calcula el precio final
+
+    Args:
+        importe: recibe importe del usuario de tipo float.
+        iva: variable para almacenar el tipo de iva introducido por el usuario.
+    Returns:
+        Retorna el precio final del artículo.
+        """
     return ((importe * iva) / 100) + importe
 
 def main():
