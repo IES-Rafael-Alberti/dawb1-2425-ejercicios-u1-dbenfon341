@@ -40,6 +40,14 @@ La actividad consiste en resolver varios ejercicios básicos de introducción al
 
 **RA y CE evaluados**: 
 
+- RA1: Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático.
+   - CE1.1: Relaciona los programas con los componentes del sistema informático, como memoria, procesador, periféricos.
+   - CE1.2: Clasifica los lenguajes de programación y explica las diferencias entre código fuente, objeto y ejecutable.
+   - 
+- RA2: Implementa soluciones de software utilizando herramientas y lenguajes de programación.
+   - CE2.1: Emplea herramientas para generar, ejecutar y depurar programas.
+   - CE2.2: Utiliza correctamente traductores de lenguajes (compiladores, intérpretes).
+
 **Conlleva presentación**: NO
 
 **Rubrica**:
