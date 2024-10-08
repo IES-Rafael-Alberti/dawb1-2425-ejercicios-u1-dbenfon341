@@ -9,7 +9,6 @@ def calcular_importe(precio_articulo: float, iva) -> tuple:
 
     return importe_con_iva, importe_sin_iva
 
-
 def main():
     IVA_10 = 10
 
