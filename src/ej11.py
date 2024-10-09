@@ -11,7 +11,7 @@ def contar_numeros(contar_num: int) -> int:
         numero_completo(int): Retornará una variable con el valor de la suma de todos los numeros desde 0 hasta contar_num.
     """
     numero_completo: int = 0
-    for i in range(0, contar_num+1):
+    for i in range(1, contar_num+1):
         numero_completo += i
     return numero_completo
 

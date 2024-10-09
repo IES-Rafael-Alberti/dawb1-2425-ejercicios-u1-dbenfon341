@@ -7,7 +7,7 @@
 
 # ++ recibe horas y coste y retorna el importe total.
 
-def calcular_horas(horas: int, precio_hora: int) -> str:
+def calcular_horas(horas: int, precio_hora: int) -> int:
     return horas*precio_hora
 
 def main():
