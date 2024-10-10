@@ -1,5 +1,5 @@
 import ej01, ej02, ej03, ej04, ej05, ej06, ej07, ej08, ej09, ej10, ej11, ej12, ej13, ej14, ej15, ej16, ej17, ej18, ej19, ej20, ej21, ej22, ej23, ej24, ej25, ej26, ej27, ej28, ej29, ej30
-from extra01 import clear
+from utils import clear
 
 # Diccionario con clave:valor de numero:main de cada ejercicio en cuestión.
 
