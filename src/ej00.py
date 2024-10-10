@@ -46,7 +46,9 @@ def validar_opcion() -> bool:
     return
 
 def main():
-    ejercicios[1]()
+
+    opcion = int(input("Introduce opcion: "))
+    ejercicios[opcion]()
 
 if __name__ == "__main__":
     main()
