@@ -17,6 +17,26 @@
 # 3. **`titular_v3(frase)`**: 
 #    - Debes usar una **lista** y modificar directamente sus elementos (convertir cada palabra a su versión capitalizada dentro de la lista).
 
+
+def titular_v1(frase: str) -> str:
+    # **solo usando un bucle**, sin convertir la frase en una lista de palabras.
+    """"""
+    
+    return
+
+def titular_v2(frase: str) -> str:
+    # utilizar una **lista**, pero no puedes modificar los elementos de la lista directamente.
+    """"""
+
+    return
+
+def titular_v3(frase: str) -> str:
+    # una **lista** y modificar directamente sus elementos (convertir cada palabra a su versión capitalizada dentro de la lista).
+    """"""
+
+    return
+
+
 def main():
     test = test
 
