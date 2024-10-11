@@ -1,1 +1,28 @@
-# Adivina el número.
+# Adivina el número utilizando randomint y un contador en bucle while.
+
+import random
+
+def main():
+    numero_oculto = random.randint(1, 500)
+    contador = 10
+
+    print(f"Introduce un número desde 1 hasta 500. Tienes {contador} intentos.")
+
+    while contador > 0:
+        numero_usuario = int(input("Introduce tu número: "))
+
+        if numero_usuario > numero_oculto:
+            contador -= 1
+            print(f"El número debe ser más bajo. Te quedan {contador} intentos.")
+        elif numero_usuario < numero_oculto:
+            contador -= 1
+            print(f"El número debe ser más alto. Te quedan {contador} intentos.")
+        else:
+            print("Ganaste!")
+            break
+    else:
+        print(f"Vaya, no adivinaste el número. El número oculto era {numero_oculto}.")
+
+
+if __name__ == "__main__":
+    main()
