@@ -2,6 +2,12 @@
 
 import random
 
+def obtener_numero(num1: int, num2: int):
+    return
+
+def validar_numero():
+    return
+
 def main():
     numero_oculto = random.randint(1, 500)
     contador = 10
