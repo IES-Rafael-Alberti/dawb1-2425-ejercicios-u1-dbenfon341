@@ -8,8 +8,11 @@ def obtener_numero(num1: int, num2: int):
 def validar_numero():
     return
 
+def numero_caotico():
+    return
+
 def main():
-    numero_oculto = random.randint(1, 20)
+    numero_oculto = random.randint(1, 10)
     contador = 10
 
     print(f"Introduce un número desde 1 hasta 500. Tienes {contador} intentos.")
@@ -24,7 +27,11 @@ def main():
             contador -= 1
             print(f"El número debe ser más alto. Te quedan {contador} intentos.")
         else:
-            print("Ganaste!")
+            print("Ganaste! ¿jugar de nuevo?")
+            repetir_juego = input("S/N").upper()
+            if repetir_juego == "S":
+                contador = 10
+                numero_oculto = random.randint(1, 10)
     else:
         print(f"Vaya, no adivinaste el número. El número oculto era {numero_oculto}.")
 
