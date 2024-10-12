@@ -9,7 +9,7 @@ def validar_numero():
     return
 
 def main():
-    numero_oculto = random.randint(1, 500)
+    numero_oculto = random.randint(1, 20)
     contador = 10
 
     print(f"Introduce un número desde 1 hasta 500. Tienes {contador} intentos.")
@@ -25,7 +25,6 @@ def main():
             print(f"El número debe ser más alto. Te quedan {contador} intentos.")
         else:
             print("Ganaste!")
-            break
     else:
         print(f"Vaya, no adivinaste el número. El número oculto era {numero_oculto}.")
 
