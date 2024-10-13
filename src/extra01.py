@@ -1,6 +1,7 @@
 # ### **2. Desarrolla un programa "extra01.py" que incluya la función "titular()"**
 
-# En este ejercicio, debes crear un programa llamado **"extra01.py"** que incluya una función **`titular(frase)`**. Esta función recibe una frase como parámetro y devuelve esa frase con las **palabras capitalizadas** y **sin espacios** antes de la primera palabra o después de la última, si los hubiera.
+# En este ejercicio, debes crear un programa llamado **"extra01.py"** que incluya una función **`titular(frase)`**. Esta función recibe una frase 
+# como parámetro y devuelve esa frase con las **palabras capitalizadas** y **sin espacios** antes de la primera palabra o después de la última, si los hubiera.
 
 # #### Restricciones:
 # - No puedes usar las funciones predefinidas **`str.title()`** ni **`str.capitalize()`**.
