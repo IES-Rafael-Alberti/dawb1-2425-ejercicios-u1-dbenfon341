@@ -1,4 +1,5 @@
 # Cálculo de un número aleatorio entre dos valores
+
 import random
 
 def numero_random(num1: int, num2: int) -> int:
