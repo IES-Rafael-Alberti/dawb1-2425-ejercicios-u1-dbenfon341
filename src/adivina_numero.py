@@ -1,4 +1,4 @@
-# Adivina el número utilizando randomint y un contador en bucle while.
+# Adivina el número utilizando randint.
 
 import random
 from utils import clear
