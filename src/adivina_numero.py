@@ -64,7 +64,7 @@ def configurar_numero_oculto() -> tuple:
         except ValueError:
             print("No has introducido un número. Vuelve a intentarlo: ")
 
-    return num_base, num_limite, intentos
+# return num_base, num_limite, intentos. Retorno no necesario por editar variables de manera global.
 
 
 def menu():
