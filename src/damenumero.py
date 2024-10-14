@@ -8,12 +8,12 @@ def dame_entero():
     numero = input("Introduce un número entero: ")
     while not comprobar_entero(numero):
         numero = input("Debe ser un número entero: ")
-    return numero
+    return int(numero)
 
 
 def main():
     numero = dame_entero()
-    print (f"Tu número es: {numero}")
+    print (f"Tu número es: {numero+numero}")
 
 if __name__ == "__main__":
     main()
