@@ -13,7 +13,7 @@ def dame_entero():
 
 def main():
     numero = dame_entero()
-    print (f"Tu número es: {numero+numero}")
+    print (f"Tu número es: {numero}")
 
 if __name__ == "__main__":
     main()
