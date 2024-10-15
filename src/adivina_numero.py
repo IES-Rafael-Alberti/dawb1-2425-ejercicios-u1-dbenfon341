@@ -1,4 +1,5 @@
 # Adivina el número utilizando randint.
+# Incluye validaciones y menú, intentando seguir los principios de responsabilidad única (SPR).
 
 import random
 from utils import clear
@@ -8,7 +9,8 @@ from utils import clear
 # num_base: se utiliza como el numero base que se utilizará en el rango desde el que se genera el número aleatorio.
 # num_limite: se utiliza como el numero límite que se utilizara en el rango desde el que se genera el número aleatorio.
 #
-# Ejemplo: "num_base 1 + num_limite 100" generará un número al azar entre 1 y 100 (1-100).
+#  ^ Ejemplo: "num_base 1 + num_limite 100" generará un número al azar entre 1 y 100 (1-100).
+# 
 # intentos: número máximo de intentos que tiene el usuario para adivinar el número.
 ##########################################################################################################################
 
@@ -17,19 +19,12 @@ num_limite = 100
 intentos = 10
 
 ##########################################################################################################################
-# Función para configurar las variables por defecto (si el usuario quiere)
-##########################################################################################################################
 
-def configurar_numero_oculto() -> tuple:
+def configurar_numero_oculto():
     """
     Función que sirve para configurar el juego.
     Valida si el input del usuario es correcto y devuelve la configuración deseada por el usuario.
-
-    Returns:
-    tuple: Una tupla con las tres configuraciones dadas.
-        - num_base(int): El número mínimo.
-        - num_limite(int): El número máximo.
-        - intentos(int): El número de intentos.
+    Edita de manera global las los valores de las variables num_base, num_limite y intentos.
     """
     global num_base, num_limite, intentos
     
@@ -49,8 +44,8 @@ def configurar_numero_oculto() -> tuple:
     while num_limite is None:
         try:
             num_limite = int(input("Introduce el numero máximo (mayor que 0): "))
-            if num_limite <= 0:
-                print("**ERROR** El número debe ser mayor que 0.")
+            if num_limite < num_base:
+                print("**ERROR** El número límite debe ser mayor que el número base.")
                 num_limite = None
         except ValueError:
             print("No has introducido un número. Vuelve a intentarlo: ")
@@ -63,8 +58,6 @@ def configurar_numero_oculto() -> tuple:
                 intentos = None
         except ValueError:
             print("No has introducido un número. Vuelve a intentarlo: ")
-
-# return num_base, num_limite, intentos. Retorno no necesario por editar variables de manera global.
 
 
 def menu():
@@ -109,6 +102,7 @@ def introducir_opcion() -> int:
         except ValueError:
             print("No has introducido un número")
     return opcion
+
 
 def validar_numero_usuario() -> int:
     """
@@ -184,6 +178,7 @@ def main():
     """
     while True:
         seleccionar_opcion(introducir_opcion())
+
 
 if __name__ == "__main__":
     main()
