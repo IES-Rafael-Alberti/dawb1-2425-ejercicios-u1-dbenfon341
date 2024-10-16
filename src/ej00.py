@@ -25,10 +25,10 @@
 # Salir del menú: El programa debe finalizar si el usuario introduce una cadena 
 # vacía o solo presiona ENTER sin introducir ningún número.
 
-import ej01, ej02, ej03, ej04, ej05, ej06, ej07, ej08, ej09, ej10, ej11, ej12, ej13, ej14, ej15, ej16, ej17, ej18, ej19, ej20, ej21, ej22, ej23, ej24, ej25, ej26, ej27, ej28, ej29, ej30
+import ej01, ej02, ej03, ej04, ej05, ej06, ej07, ej08, ej09, ej10, ej11, ej12, ej13, ej14, ej15, ej16, ej17, ej18, ej19, ej20, ej21, ej22, ej23, ej24, ej25, ej26, ej27, ej28, ej29, ej30, ej31, ej32, ej33, ej34, ej35, adivina_numero
 from utils import clear
 
-TITULO = "Ejercicios 1-30 UD 1 de Python"
+TITULO = "Ejercicios 1-35 + adivina_numero UD 1 de Python"
 
 # Constante con los valores que usaremos como confirmacion para ejecutar ejercicios.
 CONFIRMACION = "s", "si", "S", "SI", "y", "YES", "Y", "yes"
@@ -36,36 +36,41 @@ CONFIRMACION = "s", "si", "S", "SI", "y", "YES", "Y", "yes"
 
 # Lista con la descripción de cada uno de los ejercicios.
 descripcion_ejercicios = [
-    "ej01: Pida el nombre del usuario para luego darle la bienvenida.",
-    "ej02: ",
-    "ej03: ",
-    "ej04: ",
-    "ej05: ",
-    "ej06: ",
-    "ej07: ",
-    "ej08: ",
-    "ej09: ",
-    "ej10: ",
-    "ej11: ",
-    "ej12: ",
-    "ej13: ",
-    "ej14: ",
-    "ej15: ",
-    "ej16: ",
-    "ej17: ",
-    "ej18: ",
-    "ej19: ",
-    "ej20: ",
-    "ej21: ",
-    "ej22: ",
-    "ej23: ",
-    "ej24: ",
-    "ej25: ",
-    "ej26: ",
-    "ej27: ",
-    "ej28: ",
-    "ej29: ",
-    "ej30: ",
+    "ej01: Saludar",
+    "ej02: Calcular importe",
+    "ej03: Mostrar expresiones",
+    "ej04: Convertir grados",
+    "ej05: Calcular precio IVA",
+    "ej06: Calcular importe IVA 10",
+    "ej07: Suma tres números 1",
+    "ej08: Suma tres números 2",
+    "ej09: Suma tres números 3",
+    "ej10: Mostrar calculo",
+    "ej11: Sumar enteros",
+    "ej12: Calcular IMC",
+    "ej13: Dividir números",
+    "ej14: Juguetería",
+    "ej15: Cuenta de ahorros",
+    "ej16: Panadería",
+    "ej17: Imprimir nombre",
+    "ej18: Mostrar nombre mayus/minus",
+    "ej19: Numero de letras en nombre",
+    "ej20: Número de teléfono formateado",
+    "ej21: Invertir frase",
+    "ej22: Transformar vocales en mayúscula",
+    "ej23: Transformar correo electrónico",
+    "ej24: Formatear precio de producto",
+    "ej25: Formatear fecha",
+    "ej26: Cesta de la compra",
+    "ej27: Descripcion de producto",
+    "ej28: Mostrar número mayor",
+    "ej29: Mostrar edad por cumplir",
+    "ej30: Mostrar serie de números",
+    "ej32: Mostrar número aleatorio",
+    "ej33: Mostrar número primo",
+    "ej34: Mostrar divisores",
+    "ej35: Calcular serie Fibonacci",
+    "ej36: Juego de adivina el número",
 ]
 
 
@@ -100,7 +105,13 @@ ejercicios = {
     27: ej27.main,
     28: ej28.main,
     29: ej29.main,
-    30: ej30.main
+    30: ej30.main,
+    31: ej31.main,
+    32: ej32.main,
+    33: ej33.main,
+    34: ej34.main,
+    35: ej35.main,
+    36: adivina_numero.main
 }
 
 
@@ -129,7 +140,7 @@ def es_opcion_valida(opcion) -> bool:
     """
     
     """
-    return 1 <= opcion <= 30
+    return 1 <= opcion <= 36
 
 
 def main():
@@ -140,7 +151,7 @@ def main():
         if opcion == None:
             opcion = introducir_entero()
             if not es_opcion_valida(opcion):
-                print("**ERROR** Solo existen programas del 1 al 30")
+                print("**ERROR** Solo existen programas del 1 al 36")
                 opcion = None
                 pausa()
             else:

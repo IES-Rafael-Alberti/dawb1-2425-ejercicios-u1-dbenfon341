@@ -4,21 +4,13 @@
 import random
 from utils import clear
 
-##########################################################################################################################
 # Variables con valores por defecto para adivinar el número.
 # num_base: se utiliza como el numero base que se utilizará en el rango desde el que se genera el número aleatorio.
 # num_limite: se utiliza como el numero límite que se utilizara en el rango desde el que se genera el número aleatorio.
-#
-#  ^ Ejemplo: "num_base 1 + num_limite 100" generará un número al azar entre 1 y 100 (1-100).
-# 
 # intentos: número máximo de intentos que tiene el usuario para adivinar el número.
-##########################################################################################################################
-
 num_base = 1
 num_limite = 100
 intentos = 10
-
-##########################################################################################################################
 
 def configurar_numero_oculto():
     """
@@ -154,30 +146,33 @@ def start():
             clear()
             print(f"Tu número es: {numero_usuario}.")
             print(f"¡Ganaste! el número oculto era {numero_oculto} y acabaste con {intentos} intento/s restantes. ¿jugar de nuevo?")
-            repetir_juego = input("S/N").upper()
+            repetir_juego = input("Escribe 'S' si deseas volver a jugar: ").upper()
             if repetir_juego == "S":
                 clear()
                 seleccionar_opcion(introducir_opcion())
                 numero_oculto = generar_numero_oculto(num_base, num_limite)
             else:
                 print("Hasta pronto!")
+                exit()
     else:
         clear()
         print(f"Tu número es: {numero_usuario}")
         print(f"Vaya, no adivinaste el número. El número oculto era {numero_oculto}. ¿Jugar de nuevo?")
-        repetir_juego = input("S/N").upper()
+        repetir_juego = input("Escribe 'S' si deseas volver a jugar: ").upper()
         if repetir_juego == "S":
                 clear()
                 seleccionar_opcion(introducir_opcion())
                 numero_oculto = generar_numero_oculto(num_base, num_limite)
+        else:
+            print("Hasta pronto!")
+            exit()
 
 
 def main():
     """
     
     """
-    while True:
-        seleccionar_opcion(introducir_opcion())
+    seleccionar_opcion(introducir_opcion())
 
 
 if __name__ == "__main__":
