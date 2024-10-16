@@ -2,11 +2,11 @@
 # En este ejercicio, debes crear un programa principal llamado "ej00.py" que actúe 
 # como un menú para llamar a otros programas que estén ubicados en la carpeta "src". 
 # El programa debe funcionar de la siguiente manera:
-
+# 
 # Solicitar al usuario que introduzca el número del programa a ejecutar.
-
+# 
 # Validación del número del programa:
-
+# 
 # Si introduce un número entre 1 y 30, se mostrará el título del programa para 
 # indicar lo que hace, por ejemplo, "ej01: Saludo". Luego, debes preguntar si desea ejecutar el programa.
 # La respuesta afirmativa debe aceptar cualquiera de las 
@@ -14,14 +14,14 @@
 # después o entre letras. Si no desea ejecutarlo, el programa limpiará la consola y volverá a 
 # solicitar el número del programa.
 # Errores y validaciones:
-
+# 
 # Si el número introducido no corresponde con un programa válido (es decir, no está entre 1 y 30), 
 # debes mostrar un mensaje de error: "ERROR: Solo existen programas del 1 al 30".
 # Al finalizar el programa seleccionado (o después de mostrar el error), debe aparecer 
 # el mensaje "Presiona ENTER para continuar...". 
 # Tras presionar ENTER, la pantalla debe limpiarse y el programa debe volver a solicitar el número 
 # del programa.
-
+# 
 # Salir del menú: El programa debe finalizar si el usuario introduce una cadena 
 # vacía o solo presiona ENTER sin introducir ningún número.
 
@@ -36,7 +36,7 @@ CONFIRMACION = "s", "si", "S", "SI", "y", "YES", "Y", "yes"
 
 # Lista con la descripción de cada uno de los ejercicios.
 descripcion_ejercicios = [
-    "ej01: Saludar",
+    "ej01: Saludar", # -> 0
     "ej02: Calcular importe",
     "ej03: Mostrar expresiones",
     "ej04: Convertir grados",
@@ -71,11 +71,11 @@ descripcion_ejercicios = [
     "ej33: Mostrar número primo",
     "ej34: Mostrar divisores",
     "ej35: Calcular serie Fibonacci",
-    "ej36: Juego de adivina el número",
+    "ej36: Juego de adivina el número", # -> 35
 ]
 
 
-# Diccionario con clave:valor de numero:main de cada ejercicio en cuestión.
+# Diccionario con clave:valor de numero:main para cada ejercicio en cuestión.
 ejercicios = {
     1: ej01.main,
     2: ej02.main,
@@ -118,14 +118,20 @@ ejercicios = {
 
 def pausa():
     """
-    
+    Función que sirve para pausar el script hasta que el usuario pulse intro (introduzca o no algo).
     """
     input("Presiona ENTER para continuar...")
 
 
 def introducir_entero() -> int:
     """
-    
+    Solicita al usuario introducir un número.
+
+    Seguirá pidiendo entrada al usuario hasta que el valor sea un entero. En el caso de introducir algo diferente,
+    volverá a pedir entrada.
+
+    Returns:
+        int: El número introducido por el usuario (ya validado).
     """
     entero = None
     while entero is None:
@@ -139,12 +145,33 @@ def introducir_entero() -> int:
 
 def es_opcion_valida(opcion) -> bool:
     """
-    
+    Valida que el valor de opción esté entre 1 y 36 (ambos incluidos).
+
+    Devolverá verdadero o falso dependiendo si está o no dentro del rango en cuestión.
+
+    Args:
+        opcion (int): El valor que debe validar.
+
+    Returns:
+        bool: Retorna verdadero si está dentro del rango o falso en caso de no estarlo.
     """
     return 1 <= opcion <= 36
 
 
 def main():
+    """
+    Gestión de 'menu' para ejecutar otros programas.
+
+    El flujo del programa es el siguiente:
+    1. Inicializa con bucle infinito debido al valor de la variable 'iniciar'.
+    2. Se solicita entrada al usuario (número correspondiente al ejercicio).
+    3. Hace validaciones por si el número no está en el rango 1-36 o no es un entero.
+        - Si las validaciones son correctas (el valor es un número y entra en el rango) se muestra la descripción del ejercicio solicitado por el usuario.
+        - Si las validaciones no son correctas se volverá a pedir que introduzca un valor/que entre en el rango, devolviendo el valor de opcion a None.
+    4. Pregunta al usuario si desea ejecutar el ejercicio mediante un input, guardando su valor en la variable 'ejecutar'.
+        - Si el valor de 'ejecutar' es igual a uno de los valores de la constante CONFIRMACION, se ejecuta.
+        - Si por el contrario el valor de 'ejecutar' no coincide con los de la constante, se reinicia el bucle.
+    """
     iniciar = True
     opcion = None
 
