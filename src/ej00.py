@@ -66,6 +66,7 @@ descripcion_ejercicios = [
     "ej28: Mostrar número mayor",
     "ej29: Mostrar edad por cumplir",
     "ej30: Mostrar serie de números",
+    "ej31: Calcular area de triangulo",
     "ej32: Mostrar número aleatorio",
     "ej33: Mostrar número primo",
     "ej34: Mostrar divisores",
@@ -155,8 +156,8 @@ def main():
                 opcion = None
                 pausa()
             else:
-                print(f"> {descripcion_ejercicios[opcion+1]}")
-                ejecutar = input("> ¿ejecutar? (sí o no) \n").replace(" ", "")
+                print(f"> {descripcion_ejercicios[opcion-1]}")
+                ejecutar = input("> ¿ejecutar? (sí o no) ").replace(" ", "")
                 if ejecutar in CONFIRMACION:
                     ejercicios[opcion]()
                     opcion = None
