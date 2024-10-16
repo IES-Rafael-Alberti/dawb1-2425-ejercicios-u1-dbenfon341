@@ -166,7 +166,7 @@ def main():
                 else:
                     opcion = None
                     pausa()
-                    pausa()
+                    clear()
 
 if __name__ == "__main__":
     main()
