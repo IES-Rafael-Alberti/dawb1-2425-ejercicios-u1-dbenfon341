@@ -28,12 +28,16 @@
 import ej01, ej02, ej03, ej04, ej05, ej06, ej07, ej08, ej09, ej10, ej11, ej12, ej13, ej14, ej15, ej16, ej17, ej18, ej19, ej20, ej21, ej22, ej23, ej24, ej25, ej26, ej27, ej28, ej29, ej30
 from utils import clear
 
+
 # Constantes con el título del programa y valores que usaremos como confirmacion para ejecutar ejercicios.
+
 
 TITULO = "Ejercicios 1-30 UD 1 de Python"
 CONFIRMACION = "s", "si", "S", "SI", "y", "YES", "Y", "yes"
 
+
 # Lista con la descripción de cada uno de los ejercicios.
+
 
 descripcion_ejercicios = [
     "ej01: Pida el nombre del usuario para luego darle la bienvenida.",
@@ -68,7 +72,9 @@ descripcion_ejercicios = [
     "ej30: ",
 ]
 
+
 # Diccionario con clave:valor de numero:main de cada ejercicio en cuestión.
+
 
 ejercicios = {
     1: ej01.main,
@@ -103,17 +109,25 @@ ejercicios = {
     30: ej30.main
 }
 
+
 def pausa():
     input("Presiona ENTER para continuar...")
 
-def introducir_entero() -> str:
-    return str
 
-def seleccionar_opcion():
-    return
+def introducir_entero() -> int:
+    entero = None
+    while entero is None:
+        try:
+            entero = int(input("Introduce el número del programa"))
+        except ValueError:
+            print("**ERROR** Debes introducir un número.")
+            entero = None
+    return entero
+
 
 def es_opcion_valida(opcion) -> bool:
     return 1 <= opcion <= 30
+
 
 def main():
     iniciar = True
@@ -121,14 +135,23 @@ def main():
 
     while iniciar:
         if opcion == None:
-            opcion = input("Introduce el número del programa: ")
+            opcion = introducir_entero()
             if not es_opcion_valida(opcion):
                 print("**ERROR** Solo existen programas del 1 al 30")
-                pausa()
-            else:
-                ejercicios[opcion]()
                 opcion = None
                 pausa()
+            else:
+                print(f">{descripcion_ejercicios[opcion+1]}")
+                ejecutar = input("¿ejecutar? (sí o no) ").replace(" ", "")
+                if ejecutar in CONFIRMACION:
+                    ejercicios[opcion]()
+                    opcion = None
+                    pausa()
+                    clear()
+                else:
+                    opcion = None
+                    pausa()
+                    pausa()
 
 if __name__ == "__main__":
     main()
