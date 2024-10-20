@@ -135,7 +135,7 @@ def start():
             clear()
             print(f"Tu número es: {numero_usuario}.")
             print(f"El número oculto está entre {num_base} y {num_limite}.")
-            print(f"Tu número debe ser más bajo. Te quedan {intentos} intentos.")
+            print(f"El número debe ser más bajo. Te quedan {intentos} intentos.")
         elif numero_usuario < numero_oculto:
             clear()
             intentos -= 1
